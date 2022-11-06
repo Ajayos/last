@@ -22,7 +22,7 @@ require('dotenv').config();
 /**
  * Connecting to socket io 
  */
-const io = require('socket.io')(server,{ cors: { origin: 'http://' + ip.address()  }}); require('./Router/socket.io/index.js')(io);
+const io = require('socket.io')(server,{ cors: { origin: 'http://ajay-o-s.onrender.com' }}); require('./Router/socket.io/index.js')(io);
 
 
 app.use((req, res, next) => {
@@ -32,4 +32,4 @@ app.use((req, res, next) => {
 app.use('/', require('./Router/Home/index'));
 app.use('/chat', require('./Router/chat/index'));
 
-server.listen(process.env.PORT, console.log(`> Server started at:${process.env.PORT}`.green.bold + `\n> URL ${process.env.HOST}`.green.bold));
+server.listen(8080, console.log(`> Server started at:${process.env.PORT}`.green.bold + `\n> URL ${ip.address()} => 'http://ajay-o-s.onrender.com`.green.bold));
