@@ -1,4 +1,4 @@
-const socket = io('http://192.168.158.37');
+const socket = io('http://ajay-o-s.onrender.com');
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp')
 const messageContainer = document.querySelector(".container")
