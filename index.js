@@ -22,7 +22,7 @@ require('dotenv').config();
 /**
  * Connecting to socket io 
  */
-const io = require('socket.io')(server,{ cors: { origin: 'http://ajay-o-s.onrender.com' }}); require('./Router/socket.io/index.js')(io);
+const io = require('socket.io')(server,{ cors: { origin: 'https://ajay-o-s.onrender.com' }}); require('./Router/socket.io/index.js')(io);
 
 
 app.use((req, res, next) => {
